@@ -15,4 +15,13 @@ const shoppigList = [
 //seleziono l'elemento della dom su cui voglio stampare la mia lista della spesa
 
 const ulElement= document.querySelector('ul');
-console.log(ulElement)
+/* console.log(ulElement) */
+
+let i=0
+while(i<shoppigList.length){
+    const shop = shoppigList[i];
+    /* console.log(shop); */
+    const liElement = `<li>${shop}</li>`;
+    ulElement.insertAdjacentHTML('beforeend', liElement);
+    i++;
+}
